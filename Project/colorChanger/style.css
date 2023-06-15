@@ -1,0 +1,42 @@
+body {
+  background-color: azure;
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.options{
+    display: flex;
+    flex-wrap: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.button {
+  height: 100px;
+  width: 100px;
+  border: solid 1px black;
+}
+#yellow {
+  background-color: yellow;
+}
+#blue {
+  background-color: blue;
+}
+#grey {
+  background-color: grey;
+}
+#green {
+  background-color: green;
+}
+h2{
+    text-align: center;
+}

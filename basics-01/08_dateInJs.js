@@ -13,7 +13,7 @@ let myDate = new Date();
 // months starts from 0 in JS
 
 let anotherDate = new Date("2023-08-23");
-// console.log(anotherDate.toLocaleString());
+console.log(anotherDate.toLocaleString());
 
 let myTimeStamp = Date.now();
 console.log(myTimeStamp);
