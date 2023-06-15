@@ -1,35 +1,27 @@
-const green = document.getElementById("green");
+const buttons = document.querySelectorAll(".button");
+// console.log(buttons);
 
-green.addEventListener("mouseenter", () => {
-  document.body.style.backgroundColor = "green";
-});
-green.addEventListener("mouseout", () => {
-  document.body.style.backgroundColor = "azure";
-});
+const body = document.querySelector("body");
+// console.log(body);
 
-const blue = document.getElementById("blue");
+buttons.forEach((button) => {
+  // console.log(button);
+  button.addEventListener("click", (e) => {
+    // e is event object
+    // console.log(e);
+    // console.log(e.target);
 
-blue.addEventListener("mouseenter", () => {
-  document.body.style.backgroundColor = "blue";
-});
-blue.addEventListener("mouseout", () => {
-  document.body.style.backgroundColor = "azure";
-});
-
-const yellow = document.getElementById("yellow");
-
-yellow.addEventListener("mouseenter", () => {
-  document.body.style.backgroundColor = "yellow";
-});
-yellow.addEventListener("mouseout", () => {
-  document.body.style.backgroundColor = "azure";
-});
-
-const grey = document.getElementById("grey");
-
-grey.addEventListener("mouseenter", () => {
-  document.body.style.backgroundColor = "grey";
-});
-grey.addEventListener("mouseout", () => {
-  document.body.style.backgroundColor = "azure";
+    if (e.target.id === "yellow") {
+      body.style.backgroundColor = e.target.id;
+    }
+    if (e.target.id === "green") {
+      body.style.backgroundColor = e.target.id;
+    }
+    if (e.target.id === "grey") {
+      body.style.backgroundColor = e.target.id;
+    }
+    if (e.target.id === "blue") {
+      body.style.backgroundColor = e.target.id;
+    }
+  });
 });
