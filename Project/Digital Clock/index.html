@@ -9,15 +9,19 @@
     <style>
       body {
         background-color: #212121;
-        color: #fff;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
       }
-      #banner{
+      #banner {
         font-size: 30px;
-        font-weight: 700    ;
+        font-weight: 700;
       }
       .center {
         display: flex;
-        height: 100vh;
+        /* height: 100vh; */
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -27,18 +31,33 @@
         background-color: azure;
         color: black;
         padding: 5px 10px;
-        margin-top: 10px;
-        height: 30px;
+        margin-top: 20px;
+        height: 60px;
         width: 200px;
         text-align: center;
+        
+        
+        box-shadow: 0 0 5px 5px violet;
         /* border-radius: 10px; */
+      }
+      .container {
+        background-color: aqua;
+        height: 400px;
+        width: 300px;
+        
       }
     </style>
   </head>
   <body>
-    <div class="center">
-      <div id="banner"><span>Your local time</span></div>
-      <div id="clock"></div>
+    <div class="container center">
+      <div class="center">
+        <div id="banner"><span>Digial Clock</span></div>
+        <div id="clock">
+          <span id="time"></span>
+          <br />
+          <span id="date"></span>
+        </div>
+      </div>
     </div>
     <script src="./script.js"></script>
   </body>
