@@ -5,11 +5,11 @@ html {
 body {
   width: 300px;
   max-width: 750px;
-  min-width: 480px; 
+  min-width: 480px;
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: ce;
+  justify-content: center;
   margin: 0 auto;
   background-color: #212121;
 }
@@ -75,6 +75,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 100px;
 }
 .resultParas {
   margin-top: 10px;
