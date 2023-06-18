@@ -5,7 +5,11 @@ html {
 body {
   width: 300px;
   max-width: 750px;
-  min-width: 480px;
+  min-width: 480px; 
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: ce;
   margin: 0 auto;
   background-color: #212121;
 }
@@ -87,6 +91,24 @@ h1 {
 p {
   font-size: 16px;
   text-align: center;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .guessField {
+    font-size: 24px;
+  }
+
+  #subt {
+    font-size: 16px;
+  }
 }
 
 #newGame {
