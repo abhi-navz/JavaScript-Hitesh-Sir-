@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Async Javascript</h1>
+
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const say = function (name) {
+      console.log(name, Date.now());
+    };
+
+    document.querySelector("#start").addEventListener("click", () => {
+      sayName = setInterval(say, 2000, "Abhinav");
+      console.log("Started");
+    });
+
+    document.querySelector("#stop").addEventListener("click", () => {
+      clearInterval(sayName);
+      console.log("Stopped");
+    });
+  </script>
+</html>

@@ -60,14 +60,24 @@
             alt=""
           />
         </li>
+        <li>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt,
+            iste consectetur!
+          </p>
+        </li>
+        <li>
+          <a style="color: aliceblue" href="https://google.com" id="google"
+            >Google</a
+          >
+        </li>
       </ul>
     </div>
-    <a style="color: aliceblue" href="https://google.com" id="google">Google</a>
   </body>
   <script>
     document.getElementById("owl").addEventListener("click", (e) => {
-      //   alert("owl clcked");
-      //   console.log(e.target.parentNode);
+      // alert("owl clcked");
+      // console.log(e.target.parentNode);
     });
     // document.getElementById('owl').onclick = function(){
     //     alert("owl clicked")
@@ -109,6 +119,7 @@
       if (e.target.tagName === "IMG") {
         console.log(e.target.id);
         let removeIt = e.target.parentNode;
+        console.log(removeIt);
         removeIt.remove();
       } else {
         e.preventDefault();
