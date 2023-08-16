@@ -5,18 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Unlimited Color</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="../styles.css" />
   </head>
   <body style="background-color: #212121; color: #fff">
     <h1>Start should change the Background color every second</h1>
-    <button id="start">Start</button>
-    <button id="stop">Stop</button>
+    <button style="cursor: pointer" id="start">Start</button>
+    <button style="cursor: pointer" id="stop">Stop</button>
     <script>
-        const start = document.querySelector("#start");
-        const stop = document.querySelector("#stop");
+      function randomColor() {
+        const letters = "0123456789ABCDEF";
+        let color = "#";
 
-        const randomColor = 
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+      let Id;
+      const startChangingColor = function () {
+        function changeColor() {
+          document.body.style.backgroundColor = randomColor();
+          console.log("Color", randomColor());
+        }
+        if (!Id) {
+          // adding checks just to make it better production level
+          Id = setInterval(changeColor, 1000);
+          console.log("Changing started");
+        }
+      };
+
+      const stopChnagingColor = function () {
+        clearInterval(Id);
+        Id = null; // memory cleanup
+        console.log("Changing Stopped!");
+      };
+
+      document
+        .querySelector("#start")
+        .addEventListener("click", startChangingColor);
+      document
+        .querySelector("#stop")
+        .addEventListener("click", stopChnagingColor);
     </script>
   </body>
 </html>
