@@ -2,9 +2,7 @@
 
 //alert( 3 + 3) // we are using nodejs, not browser
 
-console.log(3
-
-    +3) // code readability should be high and its not a good way to write code.
+console.log(3+3) // code readability should be high and its not a good way to write code.
 
     console.log("Abhinav")
 
@@ -15,7 +13,7 @@ console.log(3
     let state;
 
     // number data type
-    // bigint
+    // big int
     // string=> ""
     // boolean ==> ture/false
     // null ==> standalone value
