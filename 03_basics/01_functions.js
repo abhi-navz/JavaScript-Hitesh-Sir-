@@ -64,5 +64,5 @@ const returnSecondValue = function (arr) {
 };
 const arr1 = [2, 3, 4, 5, 6, 6];
 // console.log(returnSecondValue(arr1)); // 3
-// console.log(returnSecondValue([2, 4, 5, 6, 7])); // 4 cand directly pass the array in the function
+// console.log(returnSecondValue([2, 4, 5, 6, 7])); // 4 can directly pass the array in the function
 
