@@ -40,6 +40,8 @@ const chai1 = () => {
 };
 // chai1();
 
+// ================================= ARROW FUNCTION ======================================
+
 // explicit way
 // const addtwoNumbers = (num1,num2) =>{
 //     return num1+num2; // will have to write the return keyword if curly braces are used in arrow function
