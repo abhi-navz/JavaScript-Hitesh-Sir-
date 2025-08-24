@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dom</title>
+  </head>
+  <body>
+    <ul class="language">
+      <li>javascript</li>
+    </ul>
+  </body>
+
+  <script>
+    function addLanguage(langName) {
+      const li = document.createElement("li");
+      li.innerHTML = `${langName}`;
+      document.querySelector(".language").appendChild(li);
+    } // not a good way tho as it's traversing the whole tree to end to append the child
+
+    addLanguage("cpp");
+    addLanguage("ruby");
+    addLanguage("typescript");
+
+    // optimisied approach
+
+    function addOptiLang(langName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector(".language").appendChild(li);
+    }
+
+    addOptiLang("golang");
+    addOptiLang("python");
+
+    // Edit
+    const firstLang = document.querySelector("li:first-child");
+    // firstLang.innerHTML = 'java';
+    // console.log(firstLang);
+    // const newLi = document.createElement('li').textContent = 'mojo'
+    // firstLang.replaceWith(newLi)
+
+    firstLang.outerHTML = "<li> Mojo </li> "; // 3rd way
+
+    // remove
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove(); // will remove the last li 
+  </script>
+</html>
